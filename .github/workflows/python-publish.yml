@@ -18,7 +18,7 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u your-dockerhub-username --password-stdin
+          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u qasimalimirza --password-stdin
           docker push qasimalimirza/python-auth-example:latest
         env:
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
